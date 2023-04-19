@@ -1,0 +1,46 @@
+.banner {
+    background-color: black;
+    position: static;
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+
+.photo {
+    margin-top: -150px;
+    display: inline-block;
+}
+
+.me {
+    margin: auto;
+}
+
+#nona {
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin: 20px;
+    height: 30%;
+    width: 30%;
+    border: calc(8px + 0.2vw);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.container {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+    box-sizing: border-box;
+    width: 90%;
+    margin-top: 50px;
+    position: relative;
+}
+
+hr {
+
+    margin-top: 0;
+    color: white;
+    border: 1px solid white;
+
+}
