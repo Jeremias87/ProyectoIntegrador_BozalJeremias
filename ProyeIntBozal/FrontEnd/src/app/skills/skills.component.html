@@ -1,18 +1,27 @@
 <div class="container text-white bg-dark mb-3" style="max-width: 75rem">
     <div class="row justify-content-center spac">
-        <div class="col-md-6 mt-3 ">
-            <h3 class="progress-title text-white">HTML5</h3>
-            <div class="progress red">
-                <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:65%;">
-                    <div class="progress-value">65%</div>
+        <h1 class="card-title title ">Skills</h1>
+        <div class="col-md-6 mt-3  *ngFor=" *ngFor="let Skills of skil">
+            <h3 class="progress-title text-white">{{Skills.nombreS}}</h3>
+            <div class="progress red ">
+                <div class="progress-bar progress-bar-danger progress-bar-striped active"
+                    style="width:{{Skills.porcentaje}}%">
+                    <div class="progress-value">{{Skills.porcentaje}}%</div>
                 </div>
             </div>
-            <h3 class="progress-title text-white">CSS3</h3>
-            <div class="progress blue">
-                <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:87%;">
-                    <div class="progress-value">87%</div>
-                </div>
+            <div class="text-center justify-content-between" *ngIf="isLogged">
+                <button type="button" routerLink="/editskill/{{Skills.id}}" class="btn m-1 btn-warning flex-wrap ">
+                    Editar
+                </button>
+                <button type="button" (click)="delete(Skills.id)" class="btn m-1 btn-warning flex-wrap">
+                    Eliminar
+                </button>
             </div>
+        </div>
+        <div class="m-5 text-center" *ngIf="isLogged">
+            <button type="button" routerLink="/nuevaskills" class="btn btn-warning">
+                Nueva Skill
+            </button>
         </div>
     </div>
 </div>

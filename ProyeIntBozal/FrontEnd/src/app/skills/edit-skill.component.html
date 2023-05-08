@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card px-2">
+                <div class="division">
+                    <div class="row">
+                    </div>
+                </div>
+                <h1 class="text-center text-white">Editar Skill</h1>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group text-white">
+                        <label for="nombreS">Nombre Skill</label>
+                        <input type="text" class="form-control text-white" id="nombreS" name="nombreS"
+                            [(ngModel)]="skillsLab.nombreS" required>
+                    </div>
+                    <div class="form-group text-white">
+                        <label for="porcentaje">Porcentaje Skill</label>
+                        <input type="text" class="form-control text-white" id="porcentaje" name="porcentaje"
+                            [(ngModel)]="skillsLab.porcentaje" required>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-warning  mb-3">
+                            Modificar Skill
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
